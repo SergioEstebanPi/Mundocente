@@ -1,0 +1,6 @@
+-- Creación de las condiciones de la tabla AREAS
+-- Creado por: Deybi Jordan Pulido Robles 
+-- Fecha de creación: 08/04/2016
+-- Modificado por:
+-- Fecha de modificación:
+-- Observaciones:
