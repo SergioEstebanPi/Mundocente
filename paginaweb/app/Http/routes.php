@@ -25,6 +25,9 @@ Route::get('/', function(){
 //Route::post('/saludar', 'BuscadorController@saludar');
 
 Route::get('/', 'BuscadorController@iniciar');
+Route::get('/Servicios/servicios', function() {
+	return View::make('/Servicios/servicios');
+});
 
 Route::get('/publicaciones/lista', 'BuscadorController@lista');
 

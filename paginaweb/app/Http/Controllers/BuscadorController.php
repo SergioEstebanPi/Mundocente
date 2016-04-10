@@ -11,15 +11,17 @@ use Illuminate\Support\Facades\Input;
 class BuscadorController extends Controller
 {
 	public function iniciar(){
+		$publicaciones = Publicacion::paginate(10);
 		//$publicaciones = Publicacion::all();
 		//return view('index')->with('publicaciones', $publicaciones);
-		return View::make('index');
+		//return View::make('index');
+		return View::make('index')->with('publicaciones', $publicaciones);
 	}
 
 	public function lista(){
 		$publicaciones = Publicacion::all();
 		//return View::make('Publicaciones.lista')->with('publicaciones', $publicaciones);
-		return view('Publicaciones.lista')->with('publicaciones', $publicaciones);
+		return View::make('Publicaciones.lista')->with('publicaciones', $publicaciones);
 	}
 
 	public function get_nuevo(){
