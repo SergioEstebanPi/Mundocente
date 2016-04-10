@@ -18,7 +18,8 @@ class BuscadorController extends Controller
 
 	public function lista(){
 		$publicaciones = Publicacion::all();
-		return View::make('Publicaciones.lista')->with('publicaciones', $publicaciones);
+		//return View::make('Publicaciones.lista')->with('publicaciones', $publicaciones);
+		return view('Publicaciones.lista')->with('publicaciones', $publicaciones);
 	}
 
 	public function get_nuevo(){
