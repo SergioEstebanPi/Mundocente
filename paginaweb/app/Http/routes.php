@@ -22,8 +22,7 @@ Route::get('/', function(){
 	return view('index');
 });
 */
-Route::post('/saludar', 'BuscadorController@saludar');
-
+//Route::post('/saludar', 'BuscadorController@saludar');
 
 Route::get('/', 'BuscadorController@iniciar');
 
