@@ -11,30 +11,40 @@
 |
 */
 
-/* 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
 */
 
-/*
-Route::get('/', function(){
-	return view('index');
-});
-*/
-//Route::post('/saludar', 'BuscadorController@saludar');
-
-Route::get('/', 'BuscadorController@iniciar');
-Route::get('/Servicios/servicios', function() {
-	return View::make('/Servicios/servicios');
+Route::get('/', function () {
+    return view('index');
 });
 
-Route::get('/publicaciones/lista', 'BuscadorController@lista');
+Route::get('/servicios', function () {
+    return view('servicios');
+});
 
-Route::get('/publicaciones/nuevo', 'BuscadorController@get_nuevo');
+Route::get('/busqueda', function () {
+	if( !Auth::check() )
+		return redirect('ingreso');
+    return view('busqueda');
+});
 
-Route::post('/publicaciones/nuevo', 'BuscadorController@post_nuevo');
+Route::get('/registro', function () {
+    return view('registro');
+});
 
-//Route::get('saludar', 'BuscadorController@saludar');
+Route::get('/contacto', function () {
+    return view('contacto');
+});
 
-//Route::controller('saludar', 'BuscadorController@saludar');
+Route::get('ingreso', 'Auth\AuthController@getLogin');
+Route::post('ingreso', 'Auth\AuthController@postLogin');
+
+Route::get('registro', 'Auth\AuthController@getRegister');
+Route::post('registro', 'Auth\AuthController@postRegister');
+
+Route::get('salir', function(){
+	Auth::logout();
+	return redirect('/');
+});

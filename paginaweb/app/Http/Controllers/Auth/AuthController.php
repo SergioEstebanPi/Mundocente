@@ -28,7 +28,10 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+    
+    //protected $redirectTo = '/';
+
+    protected $redirectPath = '/busqueda';
 
     /**
      * Create a new authentication controller instance.
@@ -68,5 +71,23 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    protected function getIngreso(){
+        return view('index');
+    }
+
+    protected function postIngreso(){
+        return view('busqueda');
+        //return "BIENVENIDO";
+    }
+
+    protected function getRegistro(){
+        return view('registro');
+    }
+
+    protected function postRegistro(){
+        return view('registro');
+        //return "REGISTRADO";
     }
 }
