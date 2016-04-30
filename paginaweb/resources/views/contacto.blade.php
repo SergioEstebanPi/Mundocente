@@ -8,7 +8,7 @@
 	class="active"
 @stop
 
-@section('superior')
+@section('contenido')
 	<div class="superior">
 		<h1>Contacto</h1>
 	</div>

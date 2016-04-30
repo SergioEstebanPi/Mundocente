@@ -9,12 +9,13 @@
 @stop
 
 @section('superior')
-	<div class="superior">
-		<h1>Registro</h1>
-	</div>
+	
 @stop
 
 @section('contenido')
+	<div class="superior">
+		<h1>Registro</h1>
+	</div>
 	<div class="registro col-md-offset-4 col-md-3">
 		<form role="form" action="registro" method="post">
 			{{ csrf_field() }}

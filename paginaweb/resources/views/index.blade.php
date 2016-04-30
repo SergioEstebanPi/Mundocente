@@ -23,15 +23,15 @@
 					{{ csrf_field() }}
 				  	<h1>Ingresar</h1>
 				  	<div class="form-group">
-					    <label for="correo">Correo</label>
-					    <input type="correo" class="form-control" id="correo" placeholder="Ingresa tu correo">
+					    <label for="email">Correo</label>
+					    <input name="email" type="email" class="form-control" id="email" placeholder="Ingresa tu correo">
 					  </div>
 				  	<div class="form-group">
-					    <label for="contrasena">Contraseña</label>
-					    <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
+					    <label for="password">Contraseña</label>
+					    <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
 				  	</div>
+				  	<a href="/"><span class="small">Olvidé mi contraseña</span></a>
 				  	<button type="submit" class="btn btn-primary">Ingresar</button>
-				  	<h5>Olvidé mi contraseña</h5>
 				</form>
 			</div>
 		</div>
