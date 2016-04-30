@@ -33,7 +33,7 @@
 			       		<li @yield('busqueda')><a href="/busqueda">Búsqueda</a></li>
 			        @endif
 			        <li @yield('servicios')><a href="/servicios">Servicios</a></li>
-			        <li @yield('registro')><a href="/registro">Registro</a></li>
+			        <li @yield('registro')><a data-toggle="modal" data-target="#myModal" href="#">Registro</a></li>
 			        <li @yield('contacto')><a href="/contacto">Contacto</a></li>
 			        @if( Auth::check() )
 			        	<li>
@@ -56,6 +56,60 @@
 		</nav>
 
 	</header>
+
+	<!-- Trigger the modal with a button -->
+	<!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Registrate en Mundocente</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p>Registrate y encuentra más publicaciones</p>
+			<form role="form" action="registro" method="post">
+				{{ csrf_field() }}
+				<div class="form-group">
+			    	<label for="name">Nombre</label>
+			    	<input name="name" type="text" class="form-control" id="name" placeholder="Introduce tu nombre">
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="email">Correo</label>
+			    	<input name="email" type="email" class="form-control" id="email" placeholder="Introduce tu correo">
+			  	</div>
+			  	<div class="form-group">
+			    	<label for="password">Contraseña</label>
+			    	<input name="password_confirmation" type="password" class="form-control" id="password" placeholder="Contraseña">
+			 	</div>
+			 	<div class="form-group">
+			    	<label for="password">Confirmar Contraseña</label>
+			    	<input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
+			 	</div>
+			 	  <div class="checkbox">
+			    <label>
+			      <input type="checkbox"> Recibir notificaciones por correo
+			    </label>
+			  </div>
+			</form>
+		
+
+
+	      </div>
+	      <div class="modal-footer">
+	      	<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+	      	<button type="submit" class="btn btn-primary">Registrar</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+
 	<div class="row">
 		@yield('superior')
 		<div class="panel container">
