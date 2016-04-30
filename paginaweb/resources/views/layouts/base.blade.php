@@ -29,7 +29,9 @@
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
 			        <li @yield('inicio')><a href="/">Inicio<span class="sr-only">(current)</span></a></li>
-			        <li @yield('busqueda')><a href="/busqueda">Búsqueda</a></li>
+			        @if( Auth::check() )
+			       		<li @yield('busqueda')><a href="/busqueda">Búsqueda</a></li>
+			        @endif
 			        <li @yield('servicios')><a href="/servicios">Servicios</a></li>
 			        <li @yield('registro')><a href="/registro">Registro</a></li>
 			        <li @yield('contacto')><a href="/contacto">Contacto</a></li>
@@ -40,7 +42,8 @@
 
 	</header>
 	<div class="row">
-		<div class="container">
+		@yield('superior')
+		<div class="panel container">
 			<div class="panel-izquierdo col-xs-12 col-sm-12 col-md-3">
 				<div class="">
 					<div class="titulo-panel text-center col-xs-12 col-sm-12 col-md-12">
@@ -67,7 +70,7 @@
 			</div>
 			<div class="principal col-xs-12 col-sm-12 col-md-9">
 				<div class="">
-					@yield('superior')
+					
 					@yield('contenido')
 					@yield('inferior')
 				</div>

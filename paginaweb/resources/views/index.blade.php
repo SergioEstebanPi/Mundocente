@@ -8,14 +8,14 @@
 	class="active"
 @stop
 
-@section('superior2')
-	<div class="superior">
+@section('superior')
+	<div class="superior container">
 		<!-- <h1>Inicio</h1>
 		<h2>Mundocente</h2>  -->
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-9">
 				<div class="banner">
-					<img src="{{ URL::asset('img/carrusel/banner-1.jpg') }}">
+					<img class="img-responsive" src="{{ URL::asset('img/carrusel/banner-1.jpg') }}">
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-3">
