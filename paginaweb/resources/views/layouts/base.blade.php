@@ -35,6 +35,20 @@
 			        <li @yield('servicios')><a href="/servicios">Servicios</a></li>
 			        <li @yield('registro')><a href="/registro">Registro</a></li>
 			        <li @yield('contacto')><a href="/contacto">Contacto</a></li>
+			        @if( Auth::check() )
+
+			        	<div class="dropdown">
+						  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+						  <span class="caret"></span></button>
+						  <ul class="dropdown-menu">
+						    <li><a href="#">HTML</a></li>
+						    <li><a href="#">CSS</a></li>
+						    <li><a href="#">JavaScript</a></li>
+						  </ul>
+						</div>
+			        	<!-- <li><a href="/salir">Salir</a></li> -->
+			        @endif
+
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
 		  	</div><!-- /.container-fluid -->
