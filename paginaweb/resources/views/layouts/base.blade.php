@@ -130,6 +130,7 @@
 							        <div class="form-group">
 							        	<!-- <label for="buscador">Búsqueda</label> -->
 							          	<input id="buscador" name="campo" type="text" class="form-control" placeholder="Busca oportunidades...">
+							          	<h4><span class="small">Ej: Docente, Inglés, Sociales, Matemáticas</span></h4>
 							          	<!-- <button type="submit" class="btn btn-primary">Buscar</button> -->
 							        </div>
 						    	</form>

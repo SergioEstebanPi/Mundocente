@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Input;
 
 class BuscadorController extends Controller
 {
+
 	public function iniciar(){
 		$publicaciones = Publicacion::paginate(10);
 		//$publicaciones = Publicacion::all();
@@ -43,17 +44,11 @@ class BuscadorController extends Controller
 		//return Redirect::to('/publicaciones/lista');
 	}
 
-    public function saludar(){
-    	echo "hola";
-    }
-
-
     public function buscarPublicaciones(){
     	$dato = Input::get('campo');
     	//echo "id " . $dato;
-    	$publicaciones = publicacion::all();
     	//echo $publicaciones;
+    	$publicaciones = publicaciones::all();
     	return View::make('index')->with('publicaciones', $publicaciones);
     }
-
 }
