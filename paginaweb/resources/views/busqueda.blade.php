@@ -29,6 +29,15 @@
 	                    <li><div class="icon gent"></div>Producción / Operarios / Manufactura</li>
 	                </ul>
 	            </div>
+<<<<<<< HEAD
+
+	    </article>
+
+	    <div class="espacio">
+	    	
+	    </div>
+
+=======
 
 	    </article>
 
@@ -50,6 +59,50 @@
 	                </ul>
 	            </div>
 
+	    </article>
+
+	    <div class="espacio">
+	    	
+	    </div>
+
+>>>>>>> 70ee51ffd718cd4f9f803495920f61018c49ea39
+	    <article class="publicacion">            
+				<div id="contenido-publicacion" class="">
+	                <h1><a class="titulo-publicacion" href="/Candidate/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-de-plasticos--inyeccion-de-plasticos--en-bogota-dc-9B0FAFDA1A0783F2">Auxiliar de plasticos  - inyeccion de plasticos </a></h1>
+	                <span><a href="http://www.computrabajo.com.co/empresas/ofertas-de-trabajo-de-grupo-t-y-s-6A5CE98DE2C370B0">Grupo T y S</a></span>
+	                <p>Empresa ubicada por bosa la despensa requiere hombres con experiencia en inyeccion de plasticos que cuenten con...</p>
+	            </div>
+	            <div id="fecha-publicacion" class="">
+	                <ul>
+	                    <li><div class="icon clock_n"></div>Ayer, 09:45 p. m.</li>
+	                    <li><div class="icon local"></div>Bogotá, D.C.</li>
+	                    <li><div class="icon gent"></div>Producción / Operarios / Manufactura</li>
+	                </ul>
+	            </div>
+
+<<<<<<< HEAD
+=======
+	    </article>
+
+
+		<div class="espacio">
+	    	
+	    </div>
+	    <article class="publicacion">            
+				<div id="contenido-publicacion" class="">
+	                <h1><a class="titulo-publicacion" href="/Candidate/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-de-plasticos--inyeccion-de-plasticos--en-bogota-dc-9B0FAFDA1A0783F2">Auxiliar de plasticos  - inyeccion de plasticos </a></h1>
+	                <span><a href="http://www.computrabajo.com.co/empresas/ofertas-de-trabajo-de-grupo-t-y-s-6A5CE98DE2C370B0">Grupo T y S</a></span>
+	                <p>Empresa ubicada por bosa la despensa requiere hombres con experiencia en inyeccion de plasticos que cuenten con...</p>
+	            </div>
+	            <div id="fecha-publicacion" class="">
+	                <ul>
+	                    <li><div class="icon clock_n"></div>Ayer, 09:45 p. m.</li>
+	                    <li><div class="icon local"></div>Bogotá, D.C.</li>
+	                    <li><div class="icon gent"></div>Producción / Operarios / Manufactura</li>
+	                </ul>
+	            </div>
+
+>>>>>>> 70ee51ffd718cd4f9f803495920f61018c49ea39
 	    </article>
 
 	    <div class="espacio">
