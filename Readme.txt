@@ -1,1 +1,1 @@
-hola
+Bienvenido al Repositorio de la plataforma Mundocente
