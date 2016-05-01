@@ -97,19 +97,30 @@ body {
 .listado {
 	background-color: blue;
 	padding: 0px;
+	display: table;
 }
 
-.publicacion {
-//	background-color: black;
-}
-	.contenido-publicacion{
-		background-color: black;
-		//background-color: white;
+	.publicacion {
+	//	background-color: black;
+		display: table-row;
+		margin-bottom: 20px;
 	}
-	.fecha-publicacion{
-		background-color: green;
-	}
+		.publicacion #contenido-publicacion{
+			border: 2px solid #e5e5e5;
+			background-color: white;
+			//background-color: white;
+			display: table-cell;
+			widows: 75%;
+		}
+		.publicacion #fecha-publicacion{
+			background-color: green;
+			display: table-cell;
+			widows: 25%;
+		}
 
+	.espacio {
+		height: 20px;
+	}
 footer {
 	color: white;
 	background-color: gray;
