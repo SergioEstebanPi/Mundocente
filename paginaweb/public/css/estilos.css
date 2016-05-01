@@ -34,7 +34,8 @@ nav .container {
 
 body {
 	margin-top: 60px;
-	background-color: #f1f1f1;
+	//background-color: #f1f1f1;
+	background: #f7f5f5;
 }
 
 .banner {
@@ -95,21 +96,46 @@ body {
 }
 
 .listado {
-	background-color: blue;
+	padding-top: 20px;
+	//background-color: blue;
+	background: #f7f5f5;	
 	padding: 0px;
+	display: table;
 }
 
-.publicacion {
-//	background-color: black;
-}
-	.contenido-publicacion{
-		background-color: black;
-		//background-color: white;
+	.publicacion{
+		//border: 1px solid #ccc;
+		//background-color: black;
+		//border: 1px solid black;
+		display: table-row;
 	}
-	.fecha-publicacion{
-		background-color: green;
-	}
+		.publicacion #contenido-publicacion:hover{
+			//background-color: blue;
+			background: #f7f5f5;
+			border-left: 3px solid #a54586;
+		}
 
+		.publicacion #contenido-publicacion{
+			padding: 10px;
+			border: 2px solid #e5e5e5;
+			background-color: white;
+			//border: 1px solid black;
+			border-left: 2px solid #a54586;
+			//background-color: white;
+			display: table-cell;
+			widows: 75%;
+		}
+		.publicacion #fecha-publicacion{
+			//background-color: green;
+			background: #ddd;
+			border-left: 1px solid #000; 
+			display: table-cell;
+			widows: 25%;
+		}
+
+	.espacio {
+		height: 20px;
+	}
 footer {
 	color: white;
 	background-color: gray;
