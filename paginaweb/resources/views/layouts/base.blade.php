@@ -125,10 +125,11 @@
 					<div class="col-xs-12 col-sm-12 col-md-12">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12">
-								<form class="" role="search">
+								<form action="buscar" method="post" class="" role="search">
+									{{ csrf_field() }}
 							        <div class="form-group">
 							        	<!-- <label for="buscador">Búsqueda</label> -->
-							          	<input id="buscador" name="buscador" type="text" class="form-control" placeholder="Busca oportunidades...">
+							          	<input id="buscador" name="campo" type="text" class="form-control" placeholder="Busca oportunidades...">
 							          	<!-- <button type="submit" class="btn btn-primary">Buscar</button> -->
 							        </div>
 						    	</form>

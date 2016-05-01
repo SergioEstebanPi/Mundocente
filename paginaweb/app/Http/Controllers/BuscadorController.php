@@ -46,4 +46,14 @@ class BuscadorController extends Controller
     public function saludar(){
     	echo "hola";
     }
+
+
+    public function buscarPublicaciones(){
+    	$dato = Input::get('campo');
+    	//echo "id " . $dato;
+    	$publicaciones = publicacion::all();
+    	//echo $publicaciones;
+    	return View::make('index')->with('publicaciones', $publicaciones);
+    }
+
 }

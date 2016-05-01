@@ -69,5 +69,12 @@
 @stop
 
 @section('inferior')
-	<h1>Inferior</h1>
+	<h1>Resultado</h1>
+	@if(isset($publicaciones))
+		@foreach($publicaciones as $publicacion)
+			<p>
+				<a href="/">{{ $publicacion }} </a>
+			</p>
+		@endforeach
+	@endif
 @stop

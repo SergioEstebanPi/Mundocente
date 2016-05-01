@@ -20,9 +20,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/servicios', function () {
-    return view('servicios');
-});
+//Route::get('/servicios', function () {
+//    return view('servicios');
+//});
 
 Route::get('/busqueda', function () {
 	if( !Auth::check() )
@@ -30,9 +30,9 @@ Route::get('/busqueda', function () {
     return view('busqueda');
 });
 
-Route::get('/registro', function () {
-    return view('registro');
-});
+//Route::get('/registro', function () {
+ //   return view('registro');
+//});
 
 Route::get('/contacto', function () {
     return view('contacto');
@@ -43,6 +43,8 @@ Route::post('ingreso', 'Auth\AuthController@postLogin');
 
 Route::get('registro', 'Auth\AuthController@getRegister');
 Route::post('registro', 'Auth\AuthController@postRegister');
+
+Route::post('buscar', 'BuscadorController@buscarPublicaciones');
 
 Route::get('salir', function(){
 	Auth::logout();
