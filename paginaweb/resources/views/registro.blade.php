@@ -29,11 +29,11 @@
 		  	</div>
 		  	<div class="form-group">
 		    	<label for="password">Contraseña</label>
-		    	<input name="password_confirmation" type="password" class="form-control" id="password" placeholder="Contraseña">
+		    	<input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
 		 	</div>
 		 	<div class="form-group">
 		    	<label for="password">Confirmar Contraseña</label>
-		    	<input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
+		    	<input name="password_confirmation" type="password" class="form-control" id="password" placeholder="Contraseña">
 		 	</div>
 		 	  <div class="checkbox">
 		    <label>

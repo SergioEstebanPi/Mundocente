@@ -13,12 +13,12 @@
 		<!-- <h1>Inicio</h1>
 		<h2>Mundocente</h2>  -->
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-9">
-				<div class="banner">
+			<div class="banner col-xs-12 col-sm-12 col-md-9">
+				<!-- <div class="banner"> -->
 					<img class="img-responsive" src="{{ URL::asset('img/carrusel/banner-1.jpg') }}">
-				</div>
+				<!-- </div> -->
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-3">
+			<div class="banner-side col-xs-12 col-sm-12 col-md-3">
 				<form role="form" action="/ingreso" method="post" class="ingreso">
 					{{ csrf_field() }}
 				  	<h1>Ingresar</h1>
@@ -30,8 +30,10 @@
 					    <label for="password">Contraseña</label>
 					    <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
 				  	</div>
-				  	<a href="/"><span class="small">Olvidé mi contraseña</span></a>
-				  	<button type="submit" class="btn btn-primary">Ingresar</button>
+				  	<div class="form-group">
+				  		<a href="/"><span class="small">Olvidé mi contraseña</span></a>
+				  		<button type="submit" class="btn btn-primary">Ingresar</button>
+				  	</div>
 				</form>
 			</div>
 		</div>

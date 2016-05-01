@@ -28,12 +28,18 @@
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
-			        <li @yield('inicio')><a href="/">Inicio<span class="sr-only">(current)</span></a></li>
+
+			      	@if( !Auth::check() )
+			        	<li @yield('inicio')><a href="/">Inicio<span class="sr-only">(current)</span></a></li>
+			        @endif
 			        @if( Auth::check() )
 			       		<li @yield('busqueda')><a href="/busqueda">Búsqueda</a></li>
 			        @endif
-			        <li @yield('servicios')><a href="/servicios">Servicios</a></li>
-			        <li @yield('registro')><a data-toggle="modal" data-target="#myModal" href="#">Registro</a></li>
+			        <!-- <li @yield('servicios')><a href="/servicios">Servicios</a></li>  -->
+			        @if( !Auth::check() )
+			        	<li @yield('registro')><a data-toggle="modal" data-target="#myModal" href="#">Registro</a></li>
+			        @endif
+
 			        <li @yield('contacto')><a href="/contacto">Contacto</a></li>
 			        @if( Auth::check() )
 			        	<li>
@@ -70,41 +76,39 @@
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
 	        <h4 class="modal-title">Registrate en Mundocente</h4>
 	      </div>
-	      <div class="modal-body">
-	        <p>Registrate y encuentra más publicaciones</p>
-			<form role="form" action="registro" method="post">
-				{{ csrf_field() }}
-				<div class="form-group">
-			    	<label for="name">Nombre</label>
-			    	<input name="name" type="text" class="form-control" id="name" placeholder="Introduce tu nombre">
-			  	</div>
-			  	<div class="form-group">
-			    	<label for="email">Correo</label>
-			    	<input name="email" type="email" class="form-control" id="email" placeholder="Introduce tu correo">
-			  	</div>
-			  	<div class="form-group">
-			    	<label for="password">Contraseña</label>
-			    	<input name="password_confirmation" type="password" class="form-control" id="password" placeholder="Contraseña">
-			 	</div>
-			 	<div class="form-group">
-			    	<label for="password">Confirmar Contraseña</label>
-			    	<input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
-			 	</div>
-			 	  <div class="checkbox">
-			    <label>
-			      <input type="checkbox"> Recibir notificaciones por correo
-			    </label>
-			  </div>
-			</form>
-		
+	      <form role="form" action="registro" method="post">
+		      <div class="modal-body">
+		        <p>Registrate y encuentra más publicaciones</p>
+					{{ csrf_field() }}
+					<div class="form-group">
+				    	<label for="name">Nombre</label>
+				    	<input name="name" type="text" class="form-control" id="name" placeholder="Introduce tu nombre">
+				  	</div>
+				  	<div class="form-group">
+				    	<label for="email">Correo</label>
+				    	<input name="email" type="email" class="form-control" id="email" placeholder="Introduce tu correo">
+				  	</div>
+				  	<div class="form-group">
+				    	<label for="password">Contraseña</label>
+				    	<input name="password_confirmation" type="password" class="form-control" id="password" placeholder="Contraseña">
+				 	</div>
+				 	<div class="form-group">
+				    	<label for="password">Confirmar Contraseña</label>
+				    	<input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
+				 	</div>
+				 	<div class="checkbox">
+					    <label>
+					      <input type="checkbox"> Recibir notificaciones por correo
+					    </label>
+				  	</div>
+				</div>
 
-
-	      </div>
-	      <div class="modal-footer">
-	      	<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-	      	<button type="submit" class="btn btn-primary">Registrar</button>
-	      </div>
-	    </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+		      	<button type="submit" class="btn btn-primary">Registrar</button>
+		      </div>
+	    	</div>
+	    </form>
 
 	  </div>
 	</div>
@@ -149,7 +153,13 @@
 	<footer>
 		<div class="container">
 			<div class="bottom-footer">
-				<h1>Pie de página</h1>
+				<h3>Desarrollo:</h3>
+				<ul>
+					<li>Deybi Pulido - <span class="small"> Back-End</span></li>
+					<li>Sergio Piña - <span class="small"> Front-End</span></li>
+					<li>Juan Rogriguez - <span class="small"> Aseguramiento de Calidad </span></li>
+					<li>Sebastian Sarmiento - <span class="small"> Aseguramiento de Calidad</span></li>
+				</ul>
 				<div class="col-xs-12 col-sm-12 col-md-12">
 					
 				</div>
