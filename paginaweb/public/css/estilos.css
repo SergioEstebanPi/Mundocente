@@ -94,6 +94,22 @@ body {
 	padding-left: 10px;
 }
 
+.listado {
+	background-color: blue;
+	padding: 0px;
+}
+
+.publicacion {
+//	background-color: black;
+}
+	.contenido-publicacion{
+		background-color: black;
+		//background-color: white;
+	}
+	.fecha-publicacion{
+		background-color: green;
+	}
+
 footer {
 	color: white;
 	background-color: gray;
