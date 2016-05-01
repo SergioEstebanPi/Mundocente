@@ -29,7 +29,6 @@
 	                    <li><div class="icon gent"></div>Producción / Operarios / Manufactura</li>
 	                </ul>
 	            </div>
-<<<<<<< HEAD
 
 	    </article>
 
@@ -37,7 +36,7 @@
 	    	
 	    </div>
 
-=======
+
 
 	    </article>
 
@@ -65,7 +64,7 @@
 	    	
 	    </div>
 
->>>>>>> 70ee51ffd718cd4f9f803495920f61018c49ea39
+
 	    <article class="publicacion">            
 				<div id="contenido-publicacion" class="">
 	                <h1><a class="titulo-publicacion" href="/Candidate/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-de-plasticos--inyeccion-de-plasticos--en-bogota-dc-9B0FAFDA1A0783F2">Auxiliar de plasticos  - inyeccion de plasticos </a></h1>
@@ -80,8 +79,8 @@
 	                </ul>
 	            </div>
 
-<<<<<<< HEAD
-=======
+
+
 	    </article>
 
 
@@ -102,7 +101,7 @@
 	                </ul>
 	            </div>
 
->>>>>>> 70ee51ffd718cd4f9f803495920f61018c49ea39
+
 	    </article>
 
 	    <div class="espacio">

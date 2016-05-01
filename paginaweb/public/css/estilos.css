@@ -103,7 +103,6 @@ body {
 	display: table;
 }
 
-<<<<<<< HEAD
 	.publicacion{
 		//border: 1px solid #ccc;
 		//background-color: black;
@@ -122,7 +121,7 @@ body {
 			background-color: white;
 			//border: 1px solid black;
 			border-left: 2px solid #a54586;
-=======
+		}
 	.publicacion {
 	//	background-color: black;
 		display: table-row;
@@ -131,19 +130,15 @@ body {
 		.publicacion #contenido-publicacion{
 			border: 2px solid #e5e5e5;
 			background-color: white;
->>>>>>> 70ee51ffd718cd4f9f803495920f61018c49ea39
 			//background-color: white;
 			display: table-cell;
 			widows: 75%;
 		}
 		.publicacion #fecha-publicacion{
-<<<<<<< HEAD
 			//background-color: green;
 			background: #ddd;
 			border-left: 1px solid #000; 
-=======
 			background-color: green;
->>>>>>> 70ee51ffd718cd4f9f803495920f61018c49ea39
 			display: table-cell;
 			widows: 25%;
 		}
