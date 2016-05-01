@@ -69,12 +69,36 @@
 @stop
 
 @section('inferior')
-	<h1>Resultado</h1>
 	@if(isset($publicaciones))
-		@foreach($publicaciones as $publicacion)
-			<p>
-				<a href="/">{{ $publicacion }} </a>
-			</p>
-		@endforeach
+		@section('contenido')
+			<h1>Resultados de búsqueda</h1>
+			@foreach($publicaciones as $publicacion)
+				<div class="lista">
+					<article class="publicacion">            
+						<div id="contenido-publicacion" class="">
+			               <!--  <h2><a class="titulo-publicacion" href="/Candidate/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-de-plasticos--inyeccion-de-plasticos--en-bogota-dc-9B0FAFDA1A0783F2">Auxiliar de plasticos  - inyeccion de plasticos </a></h2>
+			                <span><a href="http://www.computrabajo.com.co/empresas/ofertas-de-trabajo-de-grupo-t-y-s-6A5CE98DE2C370B0">Grupo T y S</a></span>
+			                <p>Empresa ubicada por bosa la despensa requiere hombres con experiencia en inyeccion de plasticos que cuenten con...</p>
+
+			                -->
+
+			                {{ $publicacion }}
+			            </div>
+			            <div id="fecha-publicacion" class="">
+			                <ul>
+			                    <li><div class=""></div>{{ $publicacion-> }}</li>
+			                    <li><div class=""></div>Bogotá, D.C.</li>
+			                    <li><div class=""></div>Producción / Operarios / Manufactura</li>
+			                </ul>
+			            </div>
+
+				    </article>
+
+				    <div class="espacio">
+			    	
+			    	</div>
+		    	</div>
+			@endforeach
+		@overwrite
 	@endif
 @stop

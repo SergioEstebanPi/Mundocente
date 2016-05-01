@@ -36,7 +36,7 @@
 	    	
 	    </div>
 
-	     <article class="publicacion">            
+	    <article class="publicacion">            
 				<div id="contenido-publicacion" class="">
 	                <h2><a class="titulo-publicacion" href="/Candidate/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-de-plasticos--inyeccion-de-plasticos--en-bogota-dc-9B0FAFDA1A0783F2">Auxiliar de plasticos  - inyeccion de plasticos </a></h2>
 	                <span><a href="http://www.computrabajo.com.co/empresas/ofertas-de-trabajo-de-grupo-t-y-s-6A5CE98DE2C370B0">Grupo T y S</a></span>
