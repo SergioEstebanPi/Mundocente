@@ -48,7 +48,7 @@ class BuscadorController extends Controller
     	$dato = Input::get('campo');
     	//echo "id " . $dato;
     	//echo $publicaciones;
-    	$publicaciones = publicaciones::all();
+    	$publicaciones = publicacion::all();
     	return View::make('index')->with('publicaciones', $publicaciones);
     }
 }
