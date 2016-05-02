@@ -80,10 +80,6 @@
 		      <div class="modal-body">
 		        <p>Registrate y encuentra más publicaciones</p>
 					{{ csrf_field() }}
-					<div class="form-group">
-				    	<label for="name">Nombre</label>
-				    	<input name="name" type="text" class="form-control" id="name" placeholder="Introduce tu nombre">
-				  	</div>
 				  	<div class="form-group">
 				    	<label for="email">Correo</label>
 				    	<input name="email" type="email" class="form-control" id="email" placeholder="Introduce tu correo">
@@ -142,6 +138,34 @@
 					    </div>
 					</div>
 				</div>	
+
+				@if( Auth::check() )
+					<div class="">
+						<div class="titulo-panel text-center col-xs-12 col-sm-12 col-md-12">
+							<h3>Filtra la búsqueda</h3>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12">
+									<form action="buscar" method="post" class="" role="search">
+										{{ csrf_field() }}
+								        <div class="form-group">
+								        	<!-- <label for="buscador">Búsqueda</label> -->
+								          	<input id="buscador" name="campo" type="text" class="form-control" placeholder="Busca oportunidades...">
+								          	<h4><span class="small">Ej: Docente, Inglés, Sociales, Matemáticas</span></h4>
+								          	<!-- <button type="submit" class="btn btn-primary">Buscar</button> -->
+								        </div>
+							    	</form>
+							    </div>
+						    	<div class="col-xs-12 col-sm-12 col-md-12">
+									<div class="resultados">
+									</div>
+								</div>
+						    </div>
+						</div>
+					</div>	
+				@endif
+
 			</div>
 			<div class="principal col-xs-12 col-sm-9 col-md-9">
 				<div class="">

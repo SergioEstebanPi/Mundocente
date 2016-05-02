@@ -41,7 +41,7 @@ Route::get('/contacto', function () {
 Route::get('ingreso', 'Auth\AuthController@getLogin');
 Route::post('ingreso', 'Auth\AuthController@postLogin');
 
-Route::get('registro', 'Auth\AuthController@getRegister');
+//Route::get('registro', 'Auth\AuthController@getRegister');
 Route::post('registro', 'Auth\AuthController@postRegister');
 
 //Route::post('buscar', 'BuscadorController@buscarPublicaciones');

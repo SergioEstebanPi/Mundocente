@@ -97,6 +97,14 @@ body {
 	padding-left: 10px;
 }
 
+	#revistas img:hover, #convocatorias img:hover, #eventos img:hover{
+		width: 110px;
+		//border: 1px solid #a54586;
+		//border-right: 1px dashed #ccc;
+		//border-left: 1px dashed #ccc;
+		//padding-left: 10px;
+	}
+
 .listado {
 	padding-top: 20px;
 	//background-color: blue;

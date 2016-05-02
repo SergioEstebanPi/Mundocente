@@ -47,21 +47,21 @@
 			<div class="">
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<div id="revistas" class="text-center">
-						<img width="50%" src="{{ URL::asset('/img/servicios/signature.png') }}">
+						<img width="100px" src="{{ URL::asset('/img/servicios/signature.png') }}">
 						<h3>Revistas Científicas</h3>
 						<p>Ahorra tiempo conociendo las revistas científicas que a la fecha reciben artículos de tu área de interés.<a href="#">ver más</a></p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<div id="convocatorias" class="text-center">
-						<img width="50%" src="{{ URL::asset('/img/servicios/business.png') }}">
+						<img width="100px" src="{{ URL::asset('/img/servicios/business.png') }}">
 						<h3>Convocatorias Docentes</h3>
 						<p>Entérate oportunamente sobre las oportunidades laborales del ámbito universitario y cumple con tus metas de crecimiento profesional.<a href="#">ver más</a></p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<div id="eventos" class="text-center">
-						<img width="50%" src="{{ URL::asset('/img/servicios/time.png') }}">
+						<img width="100px" src="{{ URL::asset('/img/servicios/time.png') }}">
 						<h3>Eventos Académicos</h3>
 						<p>Encuentra congresos, seminarios, conferencias y demás eventos académicos de tu interés para capacitación o presentación de tus resultados de investigación.<a href="#">ver más</a></p>
 					</div>
@@ -76,29 +76,30 @@
 		@section('contenido')
 			@if( isset($publicaciones) )
 				<h1 class="text-center">Resultados de búsqueda</h1>
-				<?php foreach ($publicaciones as $publicacion) { ?>		
-    				<div class="lista">
-						<article class="publicacion">            
-							<div id="contenido-publicacion" class="">
-				               <h2><a class="titulo-publicacion" href="#"><?php echo $publicacion->nombre_empleo ?></a></h2>
-				                <span><a href="#"><?php echo $publicacion->nombre_establecimiento ?></a></span>
-				                <p><?php echo $publicacion->datos_publicacion ?></p>
+				<div class="lista">
+					<?php foreach ($publicaciones as $publicacion) { ?>		
+	    				
+							<article class="publicacion">            
+								<div id="contenido-publicacion" class="">
+					               <h2><a class="titulo-publicacion" href="#"><?php echo $publicacion->nombre_empleo ?></a></h2>
+					                <span><a href="#"><?php echo $publicacion->nombre_establecimiento ?></a></span>
+					                <p><?php echo $publicacion->datos_publicacion ?></p>
 
-				            </div>
-				            <div id="fecha-publicacion" class="">
+					            </div>
+					            <div id="fecha-publicacion" class="">
 
-				            <div class="list-group">
-								  <div>Fecha publicación: <span class="small">  <?php echo $publicacion->fecha_publicacion ?></span></div>
-								  <div>Lugar: <span class="small">  <?php echo $publicacion->nombre_lugar ?></span></div>
-								  <div>Tipo publicación: <span class="small">  <?php echo $publicacion->tipo ?></span></div>		  
-							</div>
-				
-					    </article>
-					    <div class="espacio">
-				    	
-				    	</div>
-			    	</div>
-			    <?php }	?>
+					            <div class="list-group">
+									  <div>Fecha publicación: <span class="small">  <?php echo $publicacion->fecha_publicacion ?></span></div>
+									  <div>Lugar: <span class="small">  <?php echo $publicacion->nombre_lugar ?></span></div>
+									  <div>Tipo publicación: <span class="small">  <?php echo $publicacion->tipo ?></span></div>		  
+								</div>
+					
+						    </article>
+						    <div class="espacio">
+					    	
+					    	</div>
+				    <?php }	?>
+			    </div>
 			@endif
 		@overwrite
 	@endif
