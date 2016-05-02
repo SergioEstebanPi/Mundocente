@@ -96,8 +96,8 @@ class BuscadorController extends Controller
     function buscarEmpleos(){
     	//echo $mi_dato;
     	$mi_dato = Input::get('campo');
-		$consulta = "select DISTINCT e.nombre_empleo, e.fecha_cierre_empleo, e.contacto_empleo, e.salario_empleo, l.nombre_lugar, a.nombre_area, es.nombre_establecimiento, p.datos_publicacion, p.fecha_publicacion, p.tipo_publicacion,
-			( case TIPO_PUBLICACION WHEn 'RE' then 'REVISTA' when 'EM' then 'EMPLEO' when 'EV' then 'EVENTO' END ) 
+		$consulta = "select DISTINCT e.nombre_empleo, e.fecha_cierre_empleo, e.contacto_empleo, e.salario_empleo, l.nombre_lugar, a.nombre_area, es.nombre_establecimiento, p.datos_publicacion, p.fecha_publicacion,
+			( case TIPO_PUBLICACION WHEn 'RE' then 'REVISTA' when 'EM' then 'EMPLEO' when 'EV' then 'EVENTO' END ) as tipo
 			from publicaciones p,empleos e,lugares l,areas a,establecimientos es,grupos g,funcionarios f 
 			where (p.id_empleo=e.id_empleo 
 				and p.id_lugar=l.id_lugar 

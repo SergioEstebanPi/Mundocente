@@ -83,18 +83,14 @@
 
 				            </div>
 				            <div id="fecha-publicacion" class="">
-				                <ul class="">
-				                    <li><div class=""><span class="small">fecha publicación:</div><?php echo $publicacion->fecha_publicacion ?></span></li>
-				                    <li><div class=""><span class="small">Lugar:</div><?php echo $publicacion->fecha_publicacion ?></span></li>
-				                    <li><div class=""><span class="small">Tipo publicación:</div><?php echo $publicacion->tipo_publicacion ?></span></li>
 
-				                    <li><div class=""></div>Bogotá, D.C.</li>
-				                    <li><div class=""></div>Producción / Operarios / Manufactura</li>
-				                </ul>
-				            </div>
-
+				            <div class="list-group">
+								  <div>Fecha publicación: <span class="small">  <?php echo $publicacion->fecha_publicacion ?></span></div>
+								  <div>Lugar: <span class="small">  <?php echo $publicacion->nombre_lugar ?></span></div>
+								  <div>Tipo publicación: <span class="small">  <?php echo $publicacion->tipo ?></span></div>		  
+							</div>
+				
 					    </article>
-
 					    <div class="espacio">
 				    	
 				    	</div>

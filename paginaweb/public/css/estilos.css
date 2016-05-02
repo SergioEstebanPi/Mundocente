@@ -140,11 +140,14 @@ body {
 		}
 		*/
 		.publicacion #fecha-publicacion{
+			color: black;
 			//background-color: green;
+			padding-left: 10px;
+			padding-right: 10px;
 			background: #ddd;
 			border-left: 1px solid #000; 
 			display: table-cell;
-			widows: 25%;
+			width: 25%;
 		}
 
 	.espacio {
