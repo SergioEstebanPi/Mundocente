@@ -73,8 +73,10 @@
 		@section('contenido')
 			@if( isset($publicaciones) )
 				<h1 class="text-center">Resultados de búsqueda</h1>
-				@foreach($publicaciones as $publicacion)
-					<div class="lista">
+				<?php foreach ($publicaciones as $publicacion) {
+					?>
+    
+    				<div class="lista">
 						<article class="publicacion">            
 							<div id="contenido-publicacion" class="">
 				               <!--  <h2><a class="titulo-publicacion" href="/Candidate/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-de-plasticos--inyeccion-de-plasticos--en-bogota-dc-9B0FAFDA1A0783F2">Auxiliar de plasticos  - inyeccion de plasticos </a></h2>
@@ -83,7 +85,7 @@
 
 				                -->
 
-				                {{ $publicacion }}
+				                <?php echo $publicacion->NOMBRE_EMPLEO ?>
 				            </div>
 				            <div id="fecha-publicacion" class="">
 				                <ul>
@@ -99,7 +101,9 @@
 				    	
 				    	</div>
 			    	</div>
-				@endforeach
+			    <?php
+			    	}
+				?>
 			@endif
 		@overwrite
 	@endif
