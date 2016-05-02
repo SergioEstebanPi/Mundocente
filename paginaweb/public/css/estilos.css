@@ -155,7 +155,7 @@ body {
 			padding-left: 10px;
 			padding-right: 10px;
 			background: #ddd;
-			border-left: 1px solid #000; 
+			border-left: 1px dashed #ccd; 
 			display: table-cell;
 			width: 25%;
 		}

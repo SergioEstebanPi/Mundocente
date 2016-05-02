@@ -55,47 +55,25 @@ class BuscadorController extends Controller
     }
     */
 
-    public function buscarPublicaciones(){
-    	$dato = Input::get('campo');
-    	//echo "id " . $dato;
-    	//echo $publicaciones;
+    function buscarPublicaciones() {
+    	$mi_dato = Input::get('campo');
+    	$emp = $this->buscarEmpleos($mi_dato);
+    	$eve = $this->buscarEventos($mi_dato);
+    	$rev = $this->buscarRevistas($mi_dato);
 
-    	$valor = 'SELECT * FROM publicaciones p, empleos e, grupos g, areas a, funcionarios f, establecimientos es 
-    	where p.ID_PUBLICACION = e.ID_EMPLEO AND
-		p.ID_PUBLICACION = g.ID_PUBLICACION AND
-		g.ID_AREA = a.ID_AREA AND
-		p.ID_FUNCIONARIO = f.ID_FUNCIONARIO AND
-		f.ID_ESTABLECIMIENTO = es.ID_ESTABLECIMIENTO and (
-		a.NOMBRE_AREA like \'%matema%\' OR
-		p.DATOS_PUBLICACION like \'%matema%\' OR
-		e.NOMBRE_EMPLEO like \'%matema%\' OR
-		a.NOMBRE_AREA like \'%matema%\' OR
-		es.NOMBRE_ESTABLECIMIENTO like \'%matema%\')';
-		//AND es.NOMBRE_ESTABLECIMIENTO = \'JUAN DE CASTELLANOS\');';
-
-		$vvv = "select * from publicaciones";
-
-    	$libroUnico = DB::select($valor);
-
-    	/*
-    	foreach ($libroUnico as $val) {
-    		echo $val->NOMBRE_EMPLEO;
-    	}
-    	*/
-
-    	//foreach ($libroUnico as $libroUnicos) {
-    	//	echo $libroUnicos;
-    	//}
-		//dd($libroUnico);
-    	//$publicaciones = publicacion::all();
-    	//return View::make('index')->with('publicaciones', $publicaciones);
-    	return View::make('index')->with('publicaciones', $libroUnico);
+    
+    	//return View::make('index')->with('publicaciones', $resultado);
+    	return View::make('index')->with([
+    		'empleos' => $emp,
+    		'eventos' => $eve,
+    		'revistas' => $rev
+    	]);
     }
 
 
-    function buscarEmpleos(){
+    public function buscarEmpleos($mi_dato){
     	//echo $mi_dato;
-    	$mi_dato = Input::get('campo');
+    	//$mi_dato = Input::get('campo');
 		$consulta = "select DISTINCT e.nombre_empleo, e.fecha_cierre_empleo, e.contacto_empleo, e.salario_empleo, l.nombre_lugar, a.nombre_area, es.nombre_establecimiento, p.datos_publicacion, p.fecha_publicacion,
 			( case TIPO_PUBLICACION WHEn 'RE' then 'REVISTA' when 'EM' then 'EMPLEO' when 'EV' then 'EVENTO' END ) as tipo
 			from publicaciones p,empleos e,lugares l,areas a,establecimientos es,grupos g,funcionarios f 
@@ -110,8 +88,49 @@ class BuscadorController extends Controller
 			or es.nombre_establecimiento LIKE '%".$mi_dato."%' 
 			or a.nombre_area LIKE '%".$mi_dato."%' )";
 		$resultado = DB::select($consulta);
-		return View::make('index')->with('publicaciones', $resultado);
+//		return View::make('index')->with('publicaciones', $resultado);
+		return $resultado;
 	}
+
+	function buscarEventos($mi_dato){
+		$consulta = "select DISTINCT p.datos_publicacion, p.fecha_publicacion, e.nombre_evento, e.fecha_cierre_evento, e.contacto_evento, ( case CATEGORIA_EVENTO WHEn 'SE' then 'SEMINARIO' when 'AS' then 'ASAMBLEA' when 'CG' then 'CONGRESO' when 'JO' then 'JORNADA' when 'CO' then 'CONVENCION' when 'RE' then 'REUNION' when 'CF' then 'CONFERENCIA' when 'SI' then 'SIMPOSIO' when 'TA' then 'TALLER' when 'FO' then 'FORO' when 'CU' then 'CURSO' when 'OT' then 'OTRO' END )AS CATEGORIA, l.nombre_lugar, a.nombre_area, es.nombre_establecimiento ,
+			( case TIPO_PUBLICACION WHEn 'RE' then 'REVISTA' when 'EM' then 'EMPLEO' when 'EV' then 'EVENTO' END )  as tipo
+			from publicaciones p,eventos e,lugares l,areas a,establecimientos es,grupos g,funcionarios f 
+			where (p.id_evento=e.id_evento
+				and p.id_lugar=l.id_lugar 
+				and g.id_publicacion=p.id_publicacion 
+				and g.id_area=a.id_area 
+				and p.id_funcionario=f.id_funcionario 
+				and f.id_establecimiento=es.id_establecimiento ) 
+			and (e.nombre_evento LIKE '%".$mi_dato."%' 
+			or l.nombre_lugar LIKE '%".$mi_dato."%' 
+			or es.nombre_establecimiento LIKE '%".$mi_dato."%' 
+			or a.nombre_area LIKE '%".$mi_dato."%' )
+			";
+			$resultado = DB::select($consulta);
+			return $resultado;
+	}
+
+	function buscarRevistas($mi_dato){
+		//$mi_dato = Input::get('campo');
+		$consulta = "select DISTINCT p.datos_publicacion, p.fecha_publicacion, r.tema_revista, r.fecha_cierre_revista, r.contacto_revista, r.url_revista, l.nombre_lugar, a.nombre_area, es.nombre_establecimiento ,
+				( case TIPO_PUBLICACION WHEn 'RE' then 'REVISTA' when 'EM' then 'EMPLEO' when 'EV' then 'EVENTO' END ) as tipo
+				from publicaciones p,revistas r,lugares l,areas a,establecimientos es,grupos g,funcionarios f 
+				where (p.id_revista=r.id_revista 
+					and p.id_lugar=l.id_lugar 
+					and g.id_publicacion=p.id_publicacion 
+					and g.id_area=a.id_area 
+					and p.id_funcionario=f.id_funcionario 
+					and f.id_establecimiento=es.id_establecimiento ) 
+			and (r.tema_revista LIKE '%".$mi_dato."%' 
+				or l.nombre_lugar LIKE '%".$mi_dato."%' 
+				or es.nombre_establecimiento LIKE '%".$mi_dato."%' 
+				or a.nombre_area LIKE '%".$mi_dato."%' )
+			";
+			$resultado = DB::select($consulta);
+			return $resultado;
+	}
+
 
 
 }

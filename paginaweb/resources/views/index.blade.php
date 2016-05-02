@@ -72,26 +72,69 @@
 @stop
 
 @section('inferior')
-	@if(isset($publicaciones))
+	@if(isset($empleos))
 		@section('contenido')
-			@if( isset($publicaciones) )
 				<h1 class="text-center">Resultados de búsqueda</h1>
 				<div class="lista">
-					<?php foreach ($publicaciones as $publicacion) { ?>		
+					<?php foreach ($empleos as $empleo) { ?>		
 	    				
 							<article class="publicacion">            
 								<div id="contenido-publicacion" class="">
-					               <h2><a class="titulo-publicacion" href="#"><?php echo $publicacion->nombre_empleo ?></a></h2>
-					                <span><a href="#"><?php echo $publicacion->nombre_establecimiento ?></a></span>
-					                <p><?php echo $publicacion->datos_publicacion ?></p>
+					               <h2><a class="titulo-publicacion" href="#"><?php echo $empleo->nombre_empleo ?></a></h2>
+					                <span><a href="#"><?php echo $empleo->nombre_establecimiento ?></a></span>
+					                <p><?php echo $empleo->datos_publicacion ?></p>
 
 					            </div>
 					            <div id="fecha-publicacion" class="">
 
 					            <div class="list-group">
-									  <div>Fecha publicación: <span class="small">  <?php echo $publicacion->fecha_publicacion ?></span></div>
-									  <div>Lugar: <span class="small">  <?php echo $publicacion->nombre_lugar ?></span></div>
-									  <div>Tipo publicación: <span class="small">  <?php echo $publicacion->tipo ?></span></div>		  
+									  <div>Fecha publicación: <span class="small">  <?php echo $empleo->fecha_publicacion ?></span></div>
+									  <div>Lugar: <span class="small">  <?php echo $empleo->nombre_lugar ?></span></div>
+									  <div>Tipo publicación: <span class="small">  <?php echo $empleo->tipo ?></span></div>		  
+								</div>
+					
+						    </article>
+						    <div class="espacio">
+					    	
+					    	</div>
+				    <?php }	?>
+				    <?php foreach ($eventos as $evento) { ?>		
+	    				
+							<article class="publicacion">            
+								<div id="contenido-publicacion" class="">
+					               <h2><a class="titulo-publicacion" href="#"><?php echo $evento->nombre_evento ?></a></h2>
+					                <span><a href="#"><?php echo $evento->nombre_establecimiento ?></a></span>
+					                <p><?php echo $evento->datos_publicacion ?></p>
+
+					            </div>
+					            <div id="fecha-publicacion" class="">
+
+					            <div class="list-group">
+									  <div>Fecha publicación: <span class="small">  <?php echo $evento->fecha_publicacion ?></span></div>
+									  <div>Lugar: <span class="small">  <?php echo $evento->nombre_lugar ?></span></div>
+									  <div>Tipo publicación: <span class="small">  <?php echo $evento->tipo ?></span></div>		  
+								</div>
+					
+						    </article>
+						    <div class="espacio">
+					    	
+					    	</div>
+				    <?php }	?>
+				    <?php foreach ($revistas as $revista) { ?>		
+	    				
+							<article class="publicacion">            
+								<div id="contenido-publicacion" class="">
+					               <h2><a class="titulo-publicacion" href="#"><?php echo $revista->tema_revista ?></a></h2>
+					                <span><a href="#"><?php echo $revista->nombre_establecimiento ?></a></span>
+					                <p><?php echo $revista->datos_publicacion ?></p>
+
+					            </div>
+					            <div id="fecha-publicacion" class="">
+
+					            <div class="list-group">
+									  <div>Fecha publicación: <span class="small">  <?php echo $revista->fecha_publicacion ?></span></div>
+									  <div>Lugar: <span class="small">  <?php echo $revista->nombre_lugar ?></span></div>
+									  <div>Tipo publicación: <span class="small">  <?php echo $revista->tipo ?></span></div>		  
 								</div>
 					
 						    </article>
@@ -100,7 +143,6 @@
 					    	</div>
 				    <?php }	?>
 			    </div>
-			@endif
 		@overwrite
 	@endif
 @stop
