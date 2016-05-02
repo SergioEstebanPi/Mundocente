@@ -29,9 +29,7 @@
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav navbar-right">
 
-			      	@if( !Auth::check() )
-			        	<li @yield('inicio')><a href="/">Inicio<span class="sr-only">(current)</span></a></li>
-			        @endif
+		        	<li @yield('inicio')><a href="/">Inicio<span class="sr-only">(current)</span></a></li>
 			        @if( Auth::check() )
 			       		<li @yield('busqueda')><a href="/busqueda">Búsqueda</a></li>
 			        @endif
