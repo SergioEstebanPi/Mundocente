@@ -47,18 +47,21 @@
 			<div class="">
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<div id="revistas" class="text-center">
+						<img width="50%" src="{{ URL::asset('/img/servicios/signature.png') }}">
 						<h3>Revistas Científicas</h3>
 						<p>Ahorra tiempo conociendo las revistas científicas que a la fecha reciben artículos de tu área de interés.<a href="#">ver más</a></p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<div id="convocatorias" class="text-center">
+						<img width="50%" src="{{ URL::asset('/img/servicios/business.png') }}">
 						<h3>Convocatorias Docentes</h3>
 						<p>Entérate oportunamente sobre las oportunidades laborales del ámbito universitario y cumple con tus metas de crecimiento profesional.<a href="#">ver más</a></p>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<div id="eventos" class="text-center">
+						<img width="50%" src="{{ URL::asset('/img/servicios/time.png') }}">
 						<h3>Eventos Académicos</h3>
 						<p>Encuentra congresos, seminarios, conferencias y demás eventos académicos de tu interés para capacitación o presentación de tus resultados de investigación.<a href="#">ver más</a></p>
 					</div>
