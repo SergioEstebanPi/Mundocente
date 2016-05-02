@@ -41,15 +41,16 @@
 			        <li @yield('contacto')><a href="/contacto">Contacto</a></li>
 			        @if( Auth::check() )
 			        	<li>
-			        	<div class="dropdown">
-						  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Usuario
-						  <span class="caret"></span></button>
-						  <ul class="dropdown-menu">
-						    <li><a href="/">Mi área</a></li>
-						    <li><a href="/busqueda">Búsqueda</a></li>
-						    <li><a href="/salir">Salir</a></li>
-						  </ul>
-						</div>
+				        	<div class="dropdown">
+							  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+							  {{ Auth::user()->email }}
+							  <span class="caret"></span></button>
+							  <ul class="dropdown-menu">
+							    <li><a href="/">Mi área</a></li>
+							    <li><a href="/busqueda">Búsqueda</a></li>
+							    <li><a href="/salir">Cerrar sesión</a></li>
+							  </ul>
+							</div>
 						</li>
 			        	<!-- <li><a href="/salir">Salir</a></li> -->
 			        @endif
