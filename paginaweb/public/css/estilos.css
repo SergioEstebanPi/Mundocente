@@ -91,7 +91,9 @@ body {
 }
 
 #revistas, #convocatorias, #eventos {
-	border: 1px solid #a54586;
+	//border: 1px solid #a54586;
+	border-right: 1px dashed #ccc;
+	border-left: 1px dashed #ccc;
 	padding-left: 10px;
 }
 
