@@ -71,7 +71,7 @@ class BuscadorController extends Controller
     }
 
 
-    public function buscarEmpleos($mi_dato){
+    function buscarEmpleos($mi_dato){
     	//echo $mi_dato;
     	//$mi_dato = Input::get('campo');
 		$consulta = "select DISTINCT e.nombre_empleo, e.fecha_cierre_empleo, e.contacto_empleo, e.salario_empleo, l.nombre_lugar, a.nombre_area, es.nombre_establecimiento, p.datos_publicacion, p.fecha_publicacion,
