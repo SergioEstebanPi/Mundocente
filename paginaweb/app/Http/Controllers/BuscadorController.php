@@ -91,4 +91,27 @@ class BuscadorController extends Controller
     	//return View::make('index')->with('publicaciones', $publicaciones);
     	return View::make('index')->with('publicaciones', $libroUnico);
     }
+
+
+    function buscarEmpleos(){
+    	//echo $mi_dato;
+    	$mi_dato = Input::get('campo');
+		$consulta = "select DISTINCT e.nombre_empleo, e.fecha_cierre_empleo, e.contacto_empleo, e.salario_empleo, l.nombre_lugar, a.nombre_area, es.nombre_establecimiento, p.datos_publicacion, p.fecha_publicacion, p.tipo_publicacion,
+			( case TIPO_PUBLICACION WHEn 'RE' then 'REVISTA' when 'EM' then 'EMPLEO' when 'EV' then 'EVENTO' END ) 
+			from publicaciones p,empleos e,lugares l,areas a,establecimientos es,grupos g,funcionarios f 
+			where (p.id_empleo=e.id_empleo 
+				and p.id_lugar=l.id_lugar 
+				and g.id_publicacion=p.id_publicacion 
+				and g.id_area=a.id_area 
+				and p.id_funcionario=f.id_funcionario 
+				and f.id_establecimiento=es.id_establecimiento ) 
+			and (e.nombre_empleo LIKE '%".$mi_dato."%' 
+			or l.nombre_lugar LIKE '%".$mi_dato."%' 
+			or es.nombre_establecimiento LIKE '%".$mi_dato."%' 
+			or a.nombre_area LIKE '%".$mi_dato."%' )";
+		$resultado = DB::select($consulta);
+		return View::make('index')->with('publicaciones', $resultado);
+	}
+
+
 }

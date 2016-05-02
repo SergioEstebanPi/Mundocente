@@ -44,7 +44,8 @@ Route::post('ingreso', 'Auth\AuthController@postLogin');
 Route::get('registro', 'Auth\AuthController@getRegister');
 Route::post('registro', 'Auth\AuthController@postRegister');
 
-Route::post('buscar', 'BuscadorController@buscarPublicaciones');
+//Route::post('buscar', 'BuscadorController@buscarPublicaciones');
+Route::post('buscar', 'BuscadorController@buscarEmpleos');
 
 Route::get('salir', function(){
 	Auth::logout();

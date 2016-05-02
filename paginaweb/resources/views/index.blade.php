@@ -73,23 +73,21 @@
 		@section('contenido')
 			@if( isset($publicaciones) )
 				<h1 class="text-center">Resultados de búsqueda</h1>
-				<?php foreach ($publicaciones as $publicacion) {
-					?>
-    
+				<?php foreach ($publicaciones as $publicacion) { ?>		
     				<div class="lista">
 						<article class="publicacion">            
 							<div id="contenido-publicacion" class="">
-				               <!--  <h2><a class="titulo-publicacion" href="/Candidate/ofertas-de-trabajo/oferta-de-trabajo-de-auxiliar-de-plasticos--inyeccion-de-plasticos--en-bogota-dc-9B0FAFDA1A0783F2">Auxiliar de plasticos  - inyeccion de plasticos </a></h2>
-				                <span><a href="http://www.computrabajo.com.co/empresas/ofertas-de-trabajo-de-grupo-t-y-s-6A5CE98DE2C370B0">Grupo T y S</a></span>
-				                <p>Empresa ubicada por bosa la despensa requiere hombres con experiencia en inyeccion de plasticos que cuenten con...</p>
+				               <h2><a class="titulo-publicacion" href="#"><?php echo $publicacion->nombre_empleo ?></a></h2>
+				                <span><a href="#"><?php echo $publicacion->nombre_establecimiento ?></a></span>
+				                <p><?php echo $publicacion->datos_publicacion ?></p>
 
-				                -->
-
-				                <?php echo $publicacion->NOMBRE_EMPLEO ?>
 				            </div>
 				            <div id="fecha-publicacion" class="">
-				                <ul>
-				                    <li><div class=""></div></li>
+				                <ul class="">
+				                    <li><div class=""><span class="small">fecha publicación:</div><?php echo $publicacion->fecha_publicacion ?></span></li>
+				                    <li><div class=""><span class="small">Lugar:</div><?php echo $publicacion->fecha_publicacion ?></span></li>
+				                    <li><div class=""><span class="small">Tipo publicación:</div><?php echo $publicacion->tipo_publicacion ?></span></li>
+
 				                    <li><div class=""></div>Bogotá, D.C.</li>
 				                    <li><div class=""></div>Producción / Operarios / Manufactura</li>
 				                </ul>
@@ -101,9 +99,7 @@
 				    	
 				    	</div>
 			    	</div>
-			    <?php
-			    	}
-				?>
+			    <?php }	?>
 			@endif
 		@overwrite
 	@endif
