@@ -86,7 +86,7 @@ class BuscadorController extends Controller
 			and (e.nombre_empleo LIKE '%".$mi_dato."%' 
 			or l.nombre_lugar LIKE '%".$mi_dato."%' 
 			or es.nombre_establecimiento LIKE '%".$mi_dato."%' 
-			or a.nombre_area LIKE '%".$mi_dato."%' )";
+			or a.nombre_area LIKE '%".$mi_dato."%' ) order by p.fecha_publicacion";
 		$resultado = DB::select($consulta);
 //		return View::make('index')->with('publicaciones', $resultado);
 		return $resultado;
@@ -105,7 +105,7 @@ class BuscadorController extends Controller
 			and (e.nombre_evento LIKE '%".$mi_dato."%' 
 			or l.nombre_lugar LIKE '%".$mi_dato."%' 
 			or es.nombre_establecimiento LIKE '%".$mi_dato."%' 
-			or a.nombre_area LIKE '%".$mi_dato."%' )
+			or a.nombre_area LIKE '%".$mi_dato."%' ) order by p.fecha_publicacion
 			";
 			$resultado = DB::select($consulta);
 			return $resultado;
@@ -125,7 +125,7 @@ class BuscadorController extends Controller
 			and (r.tema_revista LIKE '%".$mi_dato."%' 
 				or l.nombre_lugar LIKE '%".$mi_dato."%' 
 				or es.nombre_establecimiento LIKE '%".$mi_dato."%' 
-				or a.nombre_area LIKE '%".$mi_dato."%' )
+				or a.nombre_area LIKE '%".$mi_dato."%' ) order by p.fecha_publicacion
 			";
 			$resultado = DB::select($consulta);
 			return $resultado;
