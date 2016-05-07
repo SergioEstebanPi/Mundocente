@@ -163,7 +163,64 @@ body {
 	.espacio {
 		height: 20px;
 	}
+
+.superior {
+	border-bottom: 1px solid #a54586;
+}
+
+#contacto-info {
+	width: 100%;
+}
+
+#contacto-izquierdo {
+	padding: 20px;
+	//border-left: 2px dotted #ccc;
+	border-right: 2px dotted #ccc;
+	margin: 0px;
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+}
+
+#contacto-derecho{
+	padding: 20px;
+	margin: 0px;
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	//border-left: 2px dotted #ccc;
+	//border-right: 2px dotted #ccc;
+}
+
 footer {
 	color: white;
 	background-color: gray;
+}
+
+@media all and (max-width: 1200px) {
+   	#contacto-izquierdo, #contacto-derecho {
+    	//width: 100%;
+    	//background-color: black;
+    }
+}
+
+@media all and (max-width: 840px) {
+    #contacto-izquierdo, #contacto-derecho {
+    	//width: 100%;
+    	//background-color: blue;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #contacto-izquierdo, #contacto-derecho {
+    	width: 100%;
+    	//background-color: yellow;
+    }
+}
+
+@media all and (max-width: 520px) {
+    #contacto-izquierdo, #contacto-derecho {
+    	width: 100%;
+    	//background-color: green;
+    }
 }

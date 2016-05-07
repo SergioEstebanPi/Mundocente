@@ -51,3 +51,7 @@ Route::get('salir', function(){
 	Auth::logout();
 	return redirect('/');
 });
+
+Route::get('/prueba', function(){
+	return view('prueba');
+});

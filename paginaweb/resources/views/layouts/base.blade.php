@@ -112,12 +112,12 @@
 	<div class="row">
 		@yield('superior')
 		<div class="panel container">
-			<div class="panel-izquierdo col-xs-12 col-sm-3 col-md-3">
+			<div class="panel-izquierdo col-xs-12 col-sm-12 col-md-3">
 				<div class="">
 					<div class="titulo-panel text-center col-xs-12 col-sm-12 col-md-12">
 						<h3>Realiza una búsqueda</h3>
 					</div>
-					<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="contenido-panel col-xs-12 col-sm-12 col-md-12">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12">
 								<form action="buscar" method="post" class="" role="search">
@@ -166,7 +166,7 @@
 				@endif
 
 			</div>
-			<div class="principal col-xs-12 col-sm-9 col-md-9">
+			<div class="principal col-xs-12 col-sm-12 col-md-9">
 				<div class="">
 					
 					@yield('contenido')
