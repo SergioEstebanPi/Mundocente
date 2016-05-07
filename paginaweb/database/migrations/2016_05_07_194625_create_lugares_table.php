@@ -17,10 +17,8 @@ class CreateLugaresTable extends Migration
             $table->integer('id_ubicacion')->nullable()->unsigned();
             
             $table->foreign('id_ubicacion')->references('id')->on('lugares')->onDelete('cascade');
-
-
             $table->string('nombre');
-            $table->enum('type',['detpartamento','municipio','otro']);
+            $table->enum('type',['departamento','municipio','otro']);
             $table->timestamps();
         });
     }
