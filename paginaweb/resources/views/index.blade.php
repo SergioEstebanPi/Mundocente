@@ -13,12 +13,12 @@
 		<!-- <h1>Inicio</h1>
 		<h2>Mundocente</h2>  -->
 		<div class="row">
-			<div class="banner col-xs-12 col-sm-12 col-md-9">
+			<div class="banner col-xs-12 col-sm-12 col-md-8 col-lg-9">
 				<!-- <div class="banner"> -->
 					<img class="img-responsive" src="{{ URL::asset('img/carrusel/banner-1.jpg') }}">
 				<!-- </div> -->
 			</div>
-			<div class="banner-side col-xs-12 col-sm-12 col-md-3">
+			<div class="banner-side col-xs-12 col-sm-12 col-md-4 col-lg-3">
 				<form action="/ingreso" method="post" class="ingreso form-horizonal">
 					<!-- <fieldset> -->
 

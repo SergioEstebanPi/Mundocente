@@ -113,7 +113,7 @@
 		@yield('superior')
 	</div>
 	<div class="row">
-		<div class="panel container">
+		<div class="paneles container">
 			<div class="panel-izquierdo col-xs-12 col-sm-12 col-md-3">
 				<div class="">
 					<div class="titulo-panel text-center col-xs-12 col-sm-12 col-md-12">
@@ -196,6 +196,29 @@
 	<script type="text/javascript" src="{{ URL::asset('js/jquery-1.12.3.min.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 	<script type="text/javascript">
+		$(document).ready(function(){
+			//alert('hola');
+			var posicion = $('.panel-izquierdo').offset().top;
+			var ancho = $('.panel-izquierdo').width();
+			$(window).scroll(function(){
+				var posScroll = $(window).scrollTop();
+				if (posScroll > posicion) {
+					//alert('menor');
+					$('.panel-izquierdo').addClass('fijar-panel');
+					//$('.panel-izquierdo').attr('width', posicion);					
+					$('.principal').addClass('col-md-offset-3');
+					$('.panel-izquierdo').css('width', ancho);
+				} else {
+					//alert('mayor');
+					$('.panel-izquierdo').removeClass('fijar-panel');
+					$('.principal').removeClass('col-md-offset-3');
+				}
+
+
+			});
+			//alert(posicion);
+		});
+
 		function mostrarResultados(palabra){
 			$.ajax({
 			});

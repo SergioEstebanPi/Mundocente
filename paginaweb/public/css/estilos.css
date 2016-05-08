@@ -61,17 +61,16 @@ body {
 		//margin-left: 0px;
 	}
 
-.panel {
+.paneles {
 	padding: 0px;
 	//border: 1px solid black;
 	border-top: 2px solid #a54586;
 	background-color: white;
-
 }
 
 .titulo-panel {
-	background-color: #f5f5f5;
-	border-bottom: 2px solid #e5e5e5;
+	//background-color: #f5f5f5;
+	//border-bottom: 2px solid #e5e5e5;
 }
 
 .panel-izquierdo {
@@ -80,8 +79,16 @@ body {
 	border: 1px solid #d8d8d8;
 	border-bottom: 2px solid #e5e5e5;
 	padding: 0px;
+	//background-color: black;
 
 }
+
+	.fijar-panel{
+		position: fixed;
+		//width: 290.5px;
+		z-index: 1;
+		top: 51px;
+	}
 
 .principal {
 	padding: 0px;
