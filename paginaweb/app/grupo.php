@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class grupo extends Model
 {
-     protected $table ="GRUPOS";
-    protected $fillable =['ID_PUBLICACION','ID_AREA'];
+    protected $table ="GRUPOS";
+    protected $fillable =['id_publicacion','id_area', 'created_at', 'updated_at'];
 }

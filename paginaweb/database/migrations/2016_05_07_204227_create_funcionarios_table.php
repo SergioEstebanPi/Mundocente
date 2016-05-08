@@ -14,8 +14,8 @@ class CreateFuncionariosTable extends Migration
     {
         Schema::create('funcionarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_estableimiento')->nullable()->unsigned();
-            $table->foreign('id_estableimiento')->references('id')->on('establecimientos')->onDelete('cascade');
+            $table->integer('id_establecimiento')->nullable()->unsigned();
+            $table->foreign('id_establecimiento')->references('id')->on('establecimientos')->onDelete('cascade');
             $table->string('nombre');
             $table->string('apellido')->nullable();
             $table->string('email')->unique();

@@ -8,6 +8,6 @@ class docente extends Model
 {
   public $timestamps = false;
 
-     protected $table ="DOCENTES";
-    protected $fillable =['NOMBRE_DOCENTE','APELLIDO_DOCENTE','FECHA_NACIMIENTO','GENERO','DESCRIPCION_PROFESION'];
+    protected $table ="DOCENTES";
+    protected $fillable =['id','nombre','apellido','email','password', 'type', 'created_at', 'updated_at'];
 }
