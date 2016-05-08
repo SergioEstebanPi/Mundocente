@@ -19,22 +19,51 @@
 				<!-- </div> -->
 			</div>
 			<div class="banner-side col-xs-12 col-sm-12 col-md-3">
-				<form role="form" action="/ingreso" method="post" class="ingreso">
-					{{ csrf_field() }}
-				  	<h1>Ingresar</h1>
-				  	<div class="form-group">
-					    <label for="email">Correo</label>
-					    <input name="email" type="email" class="form-control" id="email" placeholder="Ingresa tu correo">
+				<form action="/ingreso" method="post" class="ingreso form-horizonal">
+					<!-- <fieldset> -->
+
+					<!-- Form Name -->
+					<legend class="text-center">Ingreso</legend>
+
+					<!-- Text input-->
+					<div class="form-group">
+					  <label class="text-right col-md-4 control-label" for="nombre">Correo</label>  
+					  <div class="col-md-8">
+					  <input id="nombre" name="nombre" type="text" placeholder="Ingresa tu correo" class="form-control input-md" required="">
+					  <span class="help-block">correo@dominio.com</span>  
 					  </div>
-				  	<div class="form-group">
-					    <label for="password">Contraseña</label>
-					    <input name="password" type="password" class="form-control" id="password" placeholder="Contraseña">
-				  	</div>
-				  	<div class="form-group">
-				  		<a href="/"><span class="small">Olvidé mi contraseña</span></a>
-				  		<button type="submit" class="btn btn-primary">Ingresar</button>
-				  	</div>
-				</form>
+					</div>
+
+					<!-- Password input-->
+					<div class="form-group">
+					  <label class="text-right col-md-4 control-label" for="contrasena">Contraseña</label>
+					  <div class="col-md-8">
+					    <input id="contrasena" name="contrasena" type="password" placeholder="Ingresa tu contraseña" class="form-control input-md" required="">
+					    <span class="help-block">Minimo 6 caracteres</span>
+					  </div>
+					</div>
+
+					<!-- Select Basic -->
+					<div class="form-group">
+					  <label class="text-right col-md-4 control-label" for="selectbasic">Soy</label>
+					  <div class="col-md-8">
+					    <select id="selectbasic" name="selectbasic" class="form-control">
+					      <option value="1">Docente</option>
+					      <option value="2">Funcionario</option>
+					    </select>
+					  </div>
+					</div>
+
+
+					<!-- Button -->
+					<div class="form-group col-xs-12 col-sm-12 col-md-12">
+					  <a class="botones control-label" href="#">Olvide mi contraseña</a>
+					   <button id="ingresar" name="ingresar" class="botones btn btn-primary">Ingresar</button>
+					</div>
+
+					<!-- </fieldset> -->
+					</form>
+
 			</div>
 		</div>
 	</div>

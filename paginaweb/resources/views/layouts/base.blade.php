@@ -111,6 +111,8 @@
 
 	<div class="row">
 		@yield('superior')
+	</div>
+	<div class="row">
 		<div class="panel container">
 			<div class="panel-izquierdo col-xs-12 col-sm-12 col-md-3">
 				<div class="">
