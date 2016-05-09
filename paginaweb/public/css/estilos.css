@@ -18,6 +18,10 @@ nav .container {
 	//border: 2px solid yellow;
 }
 
+	.navbar-header .navbar-brand:hover{
+		background-color: #a54586;
+	}
+
 .navbar-brand {
 	//border: 2px solid blue;
 	padding: 0px;
@@ -32,6 +36,10 @@ nav .container {
 		height: 50px;
 	}
 
+	.navbar-default .navbar-nav>.active>a {
+		background-color: #a54586;
+		color: white;	
+	}
 body {
 	margin-top: 60px;
 	//background-color: #f1f1f1;
@@ -109,12 +117,22 @@ body {
 	margin-top: 10px;
 }
 
+.servicios a {
+	text-decoration: none;
+	color: black;
+}
+
 #revistas, #convocatorias, #eventos {
 	//border: 1px solid #a54586;
+	padding-top: 20px;
 	border-right: 1px dashed #ccc;
 	border-left: 1px dashed #ccc;
 	padding-left: 10px;
 }
+
+	#revistas:hover, #convocatorias:hover, #eventos:hover {
+		background-color: #efefef;
+	}
 
 	#revistas img:hover, #convocatorias img:hover, #eventos img:hover{
 		width: 110px;
@@ -217,6 +235,10 @@ footer {
 	color: white;
 	background-color: gray;
 }
+
+	footer * {
+		text-decoration: none;
+	}
 
 @media all and (max-width: 1200px) {
    	#contacto-izquierdo, #contacto-derecho {

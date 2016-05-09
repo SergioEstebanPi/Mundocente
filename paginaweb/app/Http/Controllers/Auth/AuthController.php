@@ -31,7 +31,7 @@ class AuthController extends Controller
     
     //protected $redirectTo = '/';
 
-    protected $redirectPath = '/busqueda';
+    protected $redirectPath = '/';
 
     /**
      * Create a new authentication controller instance.
@@ -73,21 +73,4 @@ class AuthController extends Controller
         ]);
     }
 
-    protected function getIngreso(){
-        return view('index');
-    }
-
-    protected function postIngreso(){
-        return view('busqueda');
-        //return "BIENVENIDO";
-    }
-
-    protected function getRegistro(){
-        return view('registro');
-    }
-
-    protected function postRegistro(){
-        return view('registro');
-        //return "REGISTRADO";
-    }
 }

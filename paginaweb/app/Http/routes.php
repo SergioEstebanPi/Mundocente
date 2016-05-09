@@ -28,10 +28,10 @@ Route::get('/', function () {
 //    return view('servicios');
 //});
 
-Route::get('/busqueda', function () {
+Route::get('/miarea', function () {
 	if( !Auth::check() )
-		return redirect('ingreso');
-    return view('busqueda');
+		return redirect('/');
+    return view('miarea');
 });
 
 //Route::get('/registro', function () {
@@ -49,7 +49,7 @@ Route::post('ingreso', 'Auth\AuthController@postLogin');
 Route::post('registro', 'Auth\AuthController@postRegister');
 
 //Route::post('buscar', 'BuscadorController@buscarPublicaciones');
-Route::post('buscar', 'BuscadorController@buscarPublicaciones');
+Route::get('buscar', 'BuscadorController@buscarPublicaciones');
 
 Route::get('salir', function(){
 	Auth::logout();

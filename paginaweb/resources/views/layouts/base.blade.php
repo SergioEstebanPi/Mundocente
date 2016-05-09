@@ -31,7 +31,7 @@
 
 		        	<li @yield('inicio')><a href="/">Inicio<span class="sr-only">(current)</span></a></li>
 			        @if( Auth::check() )
-			       		<li @yield('busqueda')><a href="/busqueda">Búsqueda</a></li>
+			       		<li @yield('miarea')><a href="/miarea">Mi Área</a></li>
 			        @endif
 			        <!-- <li @yield('servicios')><a href="/servicios">Servicios</a></li>  -->
 			        @if( !Auth::check() )
@@ -46,8 +46,8 @@
 							  {{ Auth::user()->email }}
 							  <span class="caret"></span></button>
 							  <ul class="dropdown-menu">
-							    <li><a href="/">Mi área</a></li>
-							    <li><a href="/busqueda">Búsqueda</a></li>
+							    <li><a href="/miarea">Mi área</a></li>
+							    <li><a href="/configuracion">Configuración</a></li>
 							    <li><a href="/salir">Cerrar sesión</a></li>
 							  </ul>
 							</div>
@@ -122,8 +122,8 @@
 					<div class="contenido-panel col-xs-12 col-sm-12 col-md-12">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12">
-								<form action="buscar" method="post" class="" role="search">
-									{{ csrf_field() }}
+								<form action="buscar" method="get" class="" role="search">
+									<!-- {{ csrf_field() }} -->
 							        <div class="form-group">
 							        	<!-- <label for="buscador">Búsqueda</label> -->
 							          	<input id="buscador" name="campo" type="text" class="form-control" placeholder="Ej: Docente, Inglés, Sociales...">
@@ -145,28 +145,15 @@
 
 				<div class="">
 					<div class="titulo-panel text-center col-xs-12 col-sm-12 col-md-12">
-						<h3>Realiza una búsqueda</h3>
+						<h3>Filtrar búsqueda</h3>
 					</div>
 					<div class="contenido-panel col-xs-12 col-sm-12 col-md-12">
 						<div class="row">
 							<div class="col-xs-12 col-sm-12 col-md-12">
-								<form action="buscar" method="post" class="" role="search">
-									{{ csrf_field() }}
-							        <div class="form-group">
-							        	<!-- <label for="buscador">Búsqueda</label> -->
-							          	<input id="buscador" name="campo" type="text" class="form-control" placeholder="Ej: Docente, Inglés, Sociales...">
-							          	<!-- <h4><span class="small">Ej: Docente, Inglés, Sociales, Matemáticas</span></h4> -->
-							          	<!-- <button type="submit" class="btn btn-primary">Buscar</button> -->
-							        </div>
-							        <div class="form-group">
-							        	<button type="submit" class="btn btn-primary">Buscar</button>
-							        </div>
-						    	</form>
+								<h3>Revistas</h3>
+								<h3>Convocatorias</h3>
+								<h3>Eventos</h3>
 						    </div>
-					    	<div class="col-xs-12 col-sm-12 col-md-12">
-								<div class="resultados">
-								</div>
-							</div>
 					    </div>
 					</div>
 				</div>	
@@ -226,34 +213,6 @@
 	</footer>
 	<script type="text/javascript" src="{{ URL::asset('js/jquery-1.12.3.min.js') }}"></script>
 	<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			//alert('hola');
-			var posicion = $('.panel-izquierdo').offset().top;
-			var ancho = $('.panel-izquierdo').width();
-			$(window).scroll(function(){
-				var posScroll = $(window).scrollTop();
-				if (posScroll > posicion) {
-					//alert('menor');
-					$('.panel-izquierdo').addClass('fijar-panel');
-					//$('.panel-izquierdo').attr('width', posicion);					
-					$('.principal').addClass('col-md-offset-3');
-					$('.panel-izquierdo').css('width', ancho);
-				} else {
-					//alert('mayor');
-					$('.panel-izquierdo').removeClass('fijar-panel');
-					$('.principal').removeClass('col-md-offset-3');
-				}
-
-
-			});
-			//alert(posicion);
-		});
-
-		function mostrarResultados(palabra){
-			$.ajax({
-			});
-		}
-	</script>
+	<script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
 </body>
 </html>
