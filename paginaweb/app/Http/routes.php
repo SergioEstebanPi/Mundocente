@@ -16,6 +16,10 @@
 });
 */
 
+use App\publicacion;
+use App\funcionario;
+use App\establecimiento;
+
 Route::get('/', function () {
     return view('index');
 });
@@ -55,3 +59,14 @@ Route::get('salir', function(){
 Route::get('/prueba', function(){
 	return view('prueba');
 });
+
+/*
+Route::get('obtenerPublicaciones', function(){
+	$funcionarios = funcionario::find(1);
+	$publicaciones = $funcionarios->publicacion;
+
+	foreach($publicaciones as $publicacion) {
+		echo $publicacion->nombre . " funcionario ".$publicacion->funcionario->nombre ."<br/>";
+	}
+});
+*/

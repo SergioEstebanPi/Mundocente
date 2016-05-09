@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
-use App\Publicacion;
+use App\publicacion;
 use View;
-use DB;
+//use DB;
 use Illuminate\Support\Facades\Input;
 
 class BuscadorController extends Controller
@@ -57,10 +57,21 @@ class BuscadorController extends Controller
 
     function buscarPublicaciones() {
     	$mi_dato = Input::get('campo');
-    	$publicaciones = publicacion::where('ID_LUGAR', '=', 102)->first(); 
+    	$publicaciones = publicacion::all(); 
+
+
+    	//$funcionarios = publicacion->funcionario;
+
+		foreach ($publicaciones as $publicacion) {
+			echo "Publicacion " .$publicacion->nombre ." Funcionario " .$publicacion->funcionario->nombre . "<br />";
+		}
+
     	//return View::make('index')->with('publicaciones', $resultado);
-    	dd($publicaciones);
-    	return View::make('index')->with('publicaciones', $publicaciones);
+    	//echo $publicaciones;
+    	//dd($publicaciones);
+    	return View::make('index')->with([
+    		'publicaciones' => $publicaciones
+    		]);
     }
 
 }

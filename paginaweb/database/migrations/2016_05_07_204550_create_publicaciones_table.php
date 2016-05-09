@@ -14,8 +14,8 @@ class CreatePublicacionesTable extends Migration
     {
         Schema::create('publicaciones', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_funcionario')->nullable()->unsigned();
-            $table->foreign('id_funcionario')->references('id')->on('funcionarios')->onDelete('cascade');
+            $table->integer('funcionario_id')->nullable()->unsigned();
+            $table->foreign('funcionario_id')->references('id')->on('funcionarios')->onDelete('cascade');
             $table->integer('id_lugar')->unsigned();    
             $table->foreign('id_lugar')->references('id')->on('lugares')->onDelete('cascade');
             $table->string('nombre');

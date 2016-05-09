@@ -110,21 +110,21 @@
 
 							<article class="publicacion">            
 								<div id="contenido-publicacion" class="">
-					               	<h2>
-					               		<a class="titulo-publicacion" href="#">{{ $publicacion }}</a>
-					               	</h2>
+					               	<h3>
+					               		<a class="titulo-publicacion" href="#">{{ $publicacion->nombre }}</a>
+					               	</h3>
 					                <span>
-					                	<a href="#">{{ $publicacion->id }}</a>
+					                	<a href="#">{{ $publicacion->nombre }}</a>
 					                </span>
-					                <p>{{ $publicacion }}</p>
+					                <p>{{ $publicacion->nombre }}</p>
 
 					            </div>
 					            <div id="fecha-publicacion" class="">
 					            <!--
 					            <div class="list-group">
-									  <div>Fecha publicación: <span class="small">  <?php echo $empleo->fecha_publicacion ?></span></div>
-									  <div>Lugar: <span class="small">  <?php echo $empleo->nombre_lugar ?></span></div>
-									  <div>Tipo publicación: <span class="small">  <?php echo $empleo->tipo ?></span></div>		  
+									  <div>Fecha publicación: <span class="small">  <?php  ?></span></div>
+									  <div>Lugar: <span class="small">  <?php  ?></span></div>
+									  <div>Tipo publicación: <span class="small">  <?php  ?></span></div>		  
 								</div>
 
 								-->
