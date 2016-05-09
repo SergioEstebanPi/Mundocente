@@ -14,4 +14,8 @@ class funcionario extends Model
     	return $this->hasMany('App\publicacion');
     }
 
+    public function establecimiento(){
+    	return $this->belongsTo('App\establecimiento');
+    }
+
 }

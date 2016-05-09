@@ -10,6 +10,6 @@ class establecimiento extends Model
     protected $fillable =['id','id_lugar','nombre','type', 'created_at', 'updated_at'];
 
     public function funcionario(){
-    	
+    	return $this->hasMany('App\funcionario');
     }
 }

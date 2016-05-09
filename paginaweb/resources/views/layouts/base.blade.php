@@ -93,7 +93,7 @@
 				 	</div>
 				 	<div class="checkbox">
 					    <label>
-					      <input type="checkbox"> Recibir notificaciones por correo
+					      <input type="checkbox">Recibir notificaciones por correo
 					    </label>
 				  	</div>
 				</div>
@@ -126,9 +126,40 @@
 									{{ csrf_field() }}
 							        <div class="form-group">
 							        	<!-- <label for="buscador">Búsqueda</label> -->
-							          	<input id="buscador" name="campo" type="text" class="form-control" placeholder="Busca oportunidades...">
-							          	<h4><span class="small">Ej: Docente, Inglés, Sociales, Matemáticas</span></h4>
+							          	<input id="buscador" name="campo" type="text" class="form-control" placeholder="Ej: Docente, Inglés, Sociales...">
+							          	<!-- <h4><span class="small">Ej: Docente, Inglés, Sociales, Matemáticas</span></h4> -->
 							          	<!-- <button type="submit" class="btn btn-primary">Buscar</button> -->
+							        </div>
+							        <div class="form-group">
+							        	<button type="submit" class="btn btn-primary">Buscar</button>
+							        </div>
+						    	</form>
+						    </div>
+					    	<div class="col-xs-12 col-sm-12 col-md-12">
+								<div class="resultados">
+								</div>
+							</div>
+					    </div>
+					</div>
+				</div>	
+
+				<div class="">
+					<div class="titulo-panel text-center col-xs-12 col-sm-12 col-md-12">
+						<h3>Realiza una búsqueda</h3>
+					</div>
+					<div class="contenido-panel col-xs-12 col-sm-12 col-md-12">
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<form action="buscar" method="post" class="" role="search">
+									{{ csrf_field() }}
+							        <div class="form-group">
+							        	<!-- <label for="buscador">Búsqueda</label> -->
+							          	<input id="buscador" name="campo" type="text" class="form-control" placeholder="Ej: Docente, Inglés, Sociales...">
+							          	<!-- <h4><span class="small">Ej: Docente, Inglés, Sociales, Matemáticas</span></h4> -->
+							          	<!-- <button type="submit" class="btn btn-primary">Buscar</button> -->
+							        </div>
+							        <div class="form-group">
+							        	<button type="submit" class="btn btn-primary">Buscar</button>
 							        </div>
 						    	</form>
 						    </div>

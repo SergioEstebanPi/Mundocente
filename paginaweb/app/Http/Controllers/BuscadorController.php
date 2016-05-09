@@ -57,21 +57,22 @@ class BuscadorController extends Controller
 
     function buscarPublicaciones() {
     	$mi_dato = Input::get('campo');
-    	$publicaciones = publicacion::all(); 
+    	//$publicaciones = publicacion::all(); 
+    	$publicaciones = publicacion::where('nombre', 'like', '%'.$mi_dato.'%')->get();
 
 
     	//$funcionarios = publicacion->funcionario;
 
+		/*
 		foreach ($publicaciones as $publicacion) {
 			echo "Publicacion " .$publicacion->nombre ." Funcionario " .$publicacion->funcionario->nombre . "<br />";
 		}
+		*/
 
     	//return View::make('index')->with('publicaciones', $resultado);
     	//echo $publicaciones;
     	//dd($publicaciones);
-    	return View::make('index')->with([
-    		'publicaciones' => $publicaciones
-    		]);
+    	return View::make('index')->with('publicaciones', $publicaciones);
     }
 
 }

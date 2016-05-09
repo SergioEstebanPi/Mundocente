@@ -13,4 +13,8 @@ class publicacion extends Model
     public function funcionario(){
     	return $this->belongsTo('App\funcionario');
     }
+
+    public function lugar(){
+    	return $this->belongsTo('App\lugar');
+    }
 }
