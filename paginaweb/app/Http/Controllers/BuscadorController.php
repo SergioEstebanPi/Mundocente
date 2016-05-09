@@ -58,8 +58,20 @@ class BuscadorController extends Controller
     function buscarPublicaciones() {
     	$mi_dato = Input::get('campo');
     	//$publicaciones = publicacion::all(); 
-    	$publicaciones = publicacion::where('nombre', 'like', '%'.$mi_dato.'%')->get();
-
+    	$publicaciones = publicacion::where('nombre', 'like', '%'.$mi_dato.'%')
+    		->orwhere('type', 'like', '%'.$mi_dato.'%')
+    		->orwhere('fecha_publicacion', 'like', '%'.$mi_dato.'%')
+    		->orwhere('requisitos', 'like', '%'.$mi_dato.'%')
+    		->orwhere('contacto', 'like', '%'.$mi_dato.'%')
+    		->orwhere('url', 'like', '%'.$mi_dato.'%')
+    		->get();
+		/*
+    	$publicaciones2 = publicacion::all();
+    	foreach ($publicaciones2 as $publicacion2) {
+    		$publicacion2->lugar->where('nombre', '=', $mi_dato)->get();	
+    		echo $publicacion2;
+    	} 
+    	*/
 
     	//$funcionarios = publicacion->funcionario;
 
@@ -72,6 +84,11 @@ class BuscadorController extends Controller
     	//return View::make('index')->with('publicaciones', $resultado);
     	//echo $publicaciones;
     	//dd($publicaciones);
+    	return View::make('index')->with('publicaciones', $publicaciones);
+    }
+
+    function buscarTipo($tipo){
+    	$publicaciones = publicacion::where('type', '=', $tipo)->get();
     	return View::make('index')->with('publicaciones', $publicaciones);
     }
 

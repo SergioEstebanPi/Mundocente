@@ -31,7 +31,7 @@
 
 		        	<li @yield('inicio')><a href="/">Inicio<span class="sr-only">(current)</span></a></li>
 			        @if( Auth::check() )
-			       		<li @yield('miarea')><a href="/miarea">Mi Área</a></li>
+			       		<li @yield('miarea')><a href="/miarea">Mi área</a></li>
 			        @endif
 			        <!-- <li @yield('servicios')><a href="/servicios">Servicios</a></li>  -->
 			        @if( !Auth::check() )
@@ -73,12 +73,24 @@
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Registrate en Mundocente</h4>
+	        <h4 class="text-center modal-title">Registrate en Mundocente</h4>
 	      </div>
 	      <form role="form" action="registro" method="post">
 		      <div class="modal-body">
-		        <p>Registrate y encuentra más publicaciones</p>
+		      		<p>Ingresa los siguiente datos</p>
 					{{ csrf_field() }}
+
+					<div class="form-group">
+					  <label class="text-right col-md-4 control-label" for="tipo-usuario">Soy</label>
+					  <div class="col-md-8">
+					    <select id="tipo-usuario" name="tipo-usuario" class="form-control">
+					      <option value="1">Docente</option>
+					      <option value="2">Funcionario</option>
+					    </select>
+					  </div>
+					</div>
+
+
 				  	<div class="form-group">
 				    	<label for="email">Correo</label>
 				    	<input name="email" type="email" class="form-control" id="email" placeholder="Introduce tu correo">

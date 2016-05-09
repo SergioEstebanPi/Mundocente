@@ -78,7 +78,7 @@
 		<div class="row">			
 			<div class="servicios">
 				<div class="col-xs-12 col-sm-12 col-md-4">
-					<a href="/buscar?campo=revistas">
+					<a href="/buscar/revista">
 						<div id="revistas" class="text-center">
 							<img width="100px" src="{{ URL::asset('/img/servicios/signature.png') }}">
 							<h3>Revistas Científicas</h3>
@@ -87,7 +87,7 @@
 					</a>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
-					<a href="/buscar?campo=convocatorias">
+					<a href="/buscar/empleo">
 						<div id="convocatorias" class="text-center">
 							<img width="100px" src="{{ URL::asset('/img/servicios/business.png') }}">
 							<h3>Convocatorias Docentes</h3>
@@ -96,7 +96,7 @@
 					</a>
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
-					<a href="/buscar?campo=eventos">
+					<a href="/buscar/evento">
 						<div id="eventos" class="text-center">
 							<img width="100px" src="{{ URL::asset('/img/servicios/time.png') }}">
 							<h3>Eventos Académicos</h3>

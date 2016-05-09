@@ -51,6 +51,8 @@ Route::post('registro', 'Auth\AuthController@postRegister');
 //Route::post('buscar', 'BuscadorController@buscarPublicaciones');
 Route::get('buscar', 'BuscadorController@buscarPublicaciones');
 
+Route::get('buscar/{tipo}', 'BuscadorController@buscarTipo');
+
 Route::get('salir', function(){
 	Auth::logout();
 	return redirect('/');

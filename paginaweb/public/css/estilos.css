@@ -58,6 +58,15 @@ body {
 	padding: 0px;
 }
 
+.modal-header {
+	background-color: #a54586;
+	color: white;
+}
+
+	.modal-header .close {
+		color: white;
+	}
+
 	.ingreso {
 //		background-color: white;
 		padding: 0px;
