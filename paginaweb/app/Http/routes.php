@@ -62,6 +62,44 @@ Route::get('/prueba', function(){
 	return view('prueba');
 });
 
+
+// Area del docente
+Route::group( ['middleware' => ['auth', 'docente'], 'prefix' => 'docente'], function(){
+	Route::get('/', function(){
+		return view('docente.paneldocente');
+	});
+});
+
+// Area del funcionario
+Route::group( ['middleware' => ['auth', 'funcionario'], 'prefix' => 'funcionario'], function(){
+	Route::get('/', function(){
+		return view('funcionario.paneldocente');
+	});
+});
+
+// Area del admin
+Route::group( ['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(){
+	Route::get('/', function(){
+		return view('admin.paneldocente');
+	});
+});
+
+/*
+
+Route::get('/admin/paneladmin', function(){
+	return view('admin.paneladmin');
+});
+
+Route::get('/docente/paneldocente', function(){
+	return view('docente.paneldocente');
+});
+
+Route::get('/funcionario/panelfuncionario', function(){
+	return view('funcionario.panelfuncionario');
+});
+
+*/
+
 /*
 Route::get('obtenerPublicaciones', function(){
 	$funcionarios = funcionario::find(1);
