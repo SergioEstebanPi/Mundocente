@@ -16,7 +16,19 @@ $(document).ready(function(){
 			$('.principal').removeClass('col-md-offset-3');
 		}
 
-
 	});
 	//alert(posicion);
+});
+var activo = true;
+$('.listarIntereses').click(function(){
+//	$('.listarIntereses').css('checked', false);
+	if (activo) {
+		//console.log("activo");
+		$('.intereses').css('display', 'block');
+		activo = false;
+	} else {
+		//console.log("hola mundo");
+		$('.intereses').css('display', 'none');
+		activo = true;
+	}
 });

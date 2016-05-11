@@ -18,7 +18,8 @@ class CreateDocentesTable extends Migration
             $table->string('apellido')->nullable();
             $table->string('email')->unique();
             $table->string('password');
-            $table->enum('type',['docente']);
+            $table->enum('estado', ['activo', 'inactivo']);
+            //$table->enum('type',['docente']);
             $table->timestamps();
         });
     }

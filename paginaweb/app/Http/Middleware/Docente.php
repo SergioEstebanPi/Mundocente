@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Contracts\Auth\Guard;
 
 class Docente
 {
@@ -13,6 +14,14 @@ class Docente
      * @param  \Closure  $next
      * @return mixed
      */
+
+
+    protected $auth;
+
+    public function __construct(Guard $auth){
+        $this->auth = $auth;
+    }
+
     public function handle($request, Closure $next)
     {
 
@@ -20,14 +29,15 @@ class Docente
             case '1':
                 # code...
                 //return redirect()->to('docente/paneldocente');
+                echo "soy docente";
                 break;
             case '2':
                 # code...
-                return redirect()->to('funcionario/panelfuncionario');
+                return redirect()->to('funcionario');
                 break;
             case '3':
                 # code...
-                return redirect()->to('admin/paneladmin');
+                return redirect()->to('admin');
                 break;
             
             default:

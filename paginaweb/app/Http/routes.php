@@ -73,14 +73,14 @@ Route::group( ['middleware' => ['auth', 'docente'], 'prefix' => 'docente'], func
 // Area del funcionario
 Route::group( ['middleware' => ['auth', 'funcionario'], 'prefix' => 'funcionario'], function(){
 	Route::get('/', function(){
-		return view('funcionario.paneldocente');
+		return view('funcionario.panelfuncionario');
 	});
 });
 
 // Area del admin
 Route::group( ['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function(){
 	Route::get('/', function(){
-		return view('admin.paneldocente');
+		return view('admin.paneladmin');
 	});
 });
 

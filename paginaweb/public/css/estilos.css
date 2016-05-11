@@ -67,6 +67,12 @@ body {
 		color: white;
 	}
 
+	.modal-body .intereses{
+		//visibility: hidden;
+		display: none;
+		//background-color: blue;
+	}
+
 	.ingreso {
 //		background-color: white;
 		padding: 0px;
