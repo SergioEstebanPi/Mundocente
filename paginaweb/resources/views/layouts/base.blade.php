@@ -121,7 +121,9 @@
 					  	<div class="checkbox">
 						    <label>
 						      <input type="checkbox" checked class="listarIntereses">Todos
+						      <span class="small"> - Puedes cambiarlos despúes</span>
 						    </label>
+
 				  		</div>
 					  <div class="intereses">
 					  	<ul class="list-group">
